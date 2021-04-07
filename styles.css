@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 20px;
+    background-color: rgba(203, 214, 47, 0.75);
+}
+
+.grid-icons {
+    display: grid;
+    justify-content: center;
+    min-height: 100;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+
+.grid-icons > button {
+    cursor: default;
+    font-size: 20px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+.grid-icons > button:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.double-span {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-break: break-all;
+}
+
+.output .old-value {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 25px;
+}
+
+.output .new-value {
+    color: white;
+    font-size: 25px;
+}
